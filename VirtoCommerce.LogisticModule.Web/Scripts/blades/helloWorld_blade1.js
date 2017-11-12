@@ -4,10 +4,7 @@
     blade.title = 'LogisticModule';
 
     blade.refresh = function () {
-        api.get(function (data) {
-            blade.data = data.result;
-            blade.isLoading = false;
-        });
+        blade.data = 'ui not implemented';
     }
 
     blade.refresh();

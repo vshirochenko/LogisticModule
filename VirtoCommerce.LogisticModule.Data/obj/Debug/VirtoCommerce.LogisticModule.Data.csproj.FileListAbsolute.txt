@@ -28,3 +28,4 @@ D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Dat
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Data\obj\Debug\VirtoCommerce.LogisticModule.Data.csproj.CoreCompileInputs.cache
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Data\obj\Debug\VirtoCommerce.LogisticModule.Data.dll
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Data\obj\Debug\VirtoCommerce.LogisticModule.Data.pdb
+D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Data\obj\Debug\VirtoCommerce.LogisticModule.Data.csprojResolveAssemblyReference.cache

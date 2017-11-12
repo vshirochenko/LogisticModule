@@ -1,4 +1,8 @@
-﻿using Microsoft.Practices.Unity;
+﻿using GoogleMaps.LocationServices;
+using Microsoft.Practices.Unity;
+using VirtoCommerce.Domain.Commerce.Services;
+using VirtoCommerce.InventoryModule.Data.Repositories;
+using VirtoCommerce.LogisticModule.Data.Services;
 using VirtoCommerce.Platform.Core.Modularity;
 
 namespace LogisticModule
@@ -25,15 +29,8 @@ namespace LogisticModule
 
         public override void Initialize()
         {
-            base.Initialize();
-
-            // This method is called for each installed module on the first stage of initialization.
-
-            // Register implementations:
-            // _container.RegisterType<IMyRepository>(new InjectionFactory(c => new MyRepository(_connectionStringName, new EntityPrimaryKeyGeneratorInterceptor()));
-            // _container.RegisterType<IMyService, MyServiceImplementation>();
-
-            // Try to avoid calling _container.Resolve<>();
+            _container.RegisterType<ILocationService, GoogleLocationService>(new InjectionConstructor());
+            _container.RegisterType<ILogisticService, LogisticServiceImpl>();
         }
 
         public override void PostInitialize()

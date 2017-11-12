@@ -1,4 +1,5 @@
-﻿using VirtoCommerce.Domain.Commerce.Model;
+﻿using System;
+using VirtoCommerce.Domain.Commerce.Model;
 using VirtoCommerce.LogisticModule.Data.Dtos;
 
 namespace VirtoCommerce.LogisticModule.Data.Services

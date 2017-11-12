@@ -152,6 +152,12 @@
   <ItemGroup>
     <Folder Include="Model\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VirtoCommerce.LogisticModule.Data\VirtoCommerce.LogisticModule.Data.csproj">
+      <Project>{49BA111B-BDFC-4273-85D8-22878D4363F5}</Project>
+      <Name>VirtoCommerce.LogisticModule.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

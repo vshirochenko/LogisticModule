@@ -1,17 +1,29 @@
 ﻿using System.Data.Entity;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Description;
+using VirtoCommerce.LogisticModule.Data.Dtos;
+using VirtoCommerce.LogisticModule.Data.Services;
+
 namespace LogisticModule.Controllers.Api
 {
-    [RoutePrefix("api/LogisticModule")]
-    public class ManagedModuleController : ApiController
+    [RoutePrefix("")]
+    public class LogisticModuleController : ApiController
     {
-        // GET: api/managedModule
-        [HttpGet]
-        [Route("")]
-        public IHttpActionResult Get()
+        private readonly ILogisticService _logisticService;
+
+        public LogisticModuleController(ILogisticService logisticService)
         {
-            return Ok(new { result = "Hello world!" });
+            _logisticService = logisticService;
+        }
+        
+        [HttpGet]
+        [Route("~/api/logistic/nearest")]
+        [ResponseType(typeof(FulfillmentCenterDto))]
+        public IHttpActionResult GetNearestFulfillmentCenter([FromBody]GettingNearestCenterRequestDto centerRequest)
+        {
+            FulfillmentCenterDto result = _logisticService.GetNearestFulfillmentCenter(centerRequest);
+            return Ok(result);
         }
     }
 }

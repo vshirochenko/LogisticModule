@@ -49,3 +49,4 @@ D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Tes
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Tests\obj\Debug\VirtoCommerce.LogisticModule.Tests.csproj.CoreCompileInputs.cache
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Tests\obj\Debug\VirtoCommerce.LogisticModule.Tests.dll
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Tests\obj\Debug\VirtoCommerce.LogisticModule.Tests.pdb
+D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Tests\bin\Debug\GoogleMaps.LocationServices.dll

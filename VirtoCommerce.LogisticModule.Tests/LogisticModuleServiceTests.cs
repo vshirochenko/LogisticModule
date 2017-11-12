@@ -1,4 +1,5 @@
 ﻿using System;
+using GoogleMaps.LocationServices;
 using Moq;
 using VirtoCommerce.Domain.Commerce.Services;
 using VirtoCommerce.InventoryModule.Data.Repositories;
@@ -12,23 +13,29 @@ namespace VirtoCommerce.LogisticModule.Tests
     {
         private readonly ILogisticService _LogisticService;
 
-        private readonly Mock<IInventoryRepository> _InventoryRepositoryMock;
-        private readonly Mock<ICommerceService> _CommerceServiceMock;
+        private readonly Mock<IInventoryRepository> _inventoryRepositoryMock;
+        private readonly Mock<ICommerceService> _commerceServiceMock;
+        private readonly Mock<ILocationService> _googleServiceMock;
 
         public LogisticModuleServiceTests()
         {
-            _InventoryRepositoryMock = new Mock<IInventoryRepository>();
-            _CommerceServiceMock = new Mock<ICommerceService>();
+            _inventoryRepositoryMock = new Mock<IInventoryRepository>();
+            _commerceServiceMock = new Mock<ICommerceService>();
+            _googleServiceMock = new Mock<ILocationService>();
 
-            _LogisticService = new LogisticServiceImpl(_InventoryRepositoryMock.Object, _CommerceServiceMock.Object);
+            _LogisticService = new LogisticServiceImpl(
+                _inventoryRepositoryMock.Object, 
+                _commerceServiceMock.Object,
+                _googleServiceMock.Object
+            );
         }
 
         [Fact]
         public void GetNearestCenter_Request_Null_ThrowsException()
         {
             // ARRANGE 
-            NearestCenterRequestDto request = null;
-            
+            GettingNearestCenterRequestDto request = null;
+
             // ACT
             Assert.Throws<ArgumentNullException>(() => _LogisticService.GetNearestFulfillmentCenter(request));
         }
@@ -37,28 +44,42 @@ namespace VirtoCommerce.LogisticModule.Tests
         public void GetNearestCenter_GetInventories_WasCalled()
         {
             // ARRANGE
-            NearestCenterRequestDto request = new NearestCenterRequestDto();
-            _InventoryRepositoryMock.Setup(x => x.Inventories);
+            GettingNearestCenterRequestDto request = new GettingNearestCenterRequestDto();
+            _inventoryRepositoryMock.Setup(x => x.Inventories);
 
             // ACT
             _LogisticService.GetNearestFulfillmentCenter(request);
 
             // ASSERT
-            _InventoryRepositoryMock.Verify(x => x.Inventories, Times.Once);
+            _inventoryRepositoryMock.Verify(x => x.Inventories, Times.Once);
         }
 
         [Fact]
         public void GetNearestCenter_GetAllFulfillmentCenters_WasCalled()
         {
             // ARRANGE
-            NearestCenterRequestDto request = new NearestCenterRequestDto();
-            _CommerceServiceMock.Setup(x => x.GetAllFulfillmentCenters());
+            GettingNearestCenterRequestDto request = new GettingNearestCenterRequestDto();
+            _commerceServiceMock.Setup(x => x.GetAllFulfillmentCenters());
 
             // ACT
             _LogisticService.GetNearestFulfillmentCenter(request);
 
             // ASSERT
-            _CommerceServiceMock.Verify(x => x.GetAllFulfillmentCenters(), Times.Once);
+            _commerceServiceMock.Verify(x => x.GetAllFulfillmentCenters(), Times.Once);
+        }
+
+        [Fact]
+        public void GetDistanceBetweenTwoAddresses_GoogleService_GetLocation_WasCalledTwice()
+        {
+            // ARRANGE
+            string postalCodeFrom = "1", postalCodeTo = "2";
+            _googleServiceMock.Setup(x => x.GetLatLongFromAddress(It.IsAny<string>()));
+
+            // ACT
+            double dist = _LogisticService.GetDistanceBetweenTwoAddresses(postalCodeFrom, postalCodeTo);
+
+            // ASSERT
+            _googleServiceMock.Verify(x => x.GetLatLongFromAddress(It.IsAny<string>()), Times.Exactly(2));
         }
     }
 }

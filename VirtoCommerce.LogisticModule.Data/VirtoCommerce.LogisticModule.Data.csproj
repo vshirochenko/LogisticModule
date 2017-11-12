@@ -81,7 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dtos\FulfillmentCenterDto.cs" />
-    <Compile Include="Dtos\NearestCenterRequestDto.cs" />
+    <Compile Include="Dtos\GettingNearestCenterRequestDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ILogisticService.cs" />
     <Compile Include="Services\LogisticServiceImpl.cs" />

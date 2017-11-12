@@ -5,6 +5,8 @@ namespace VirtoCommerce.LogisticModule.Data.Services
 {
     public interface ILogisticService
     {
-        FulfillmentCenterDto GetNearestFulfillmentCenter(NearestCenterRequestDto centerRequest);
+        FulfillmentCenterDto GetNearestFulfillmentCenter(GettingNearestCenterRequestDto centerRequest);
+
+        double GetDistanceBetweenTwoAddresses(string postalCodeFrom, string postalCodeTo);
     }
 }

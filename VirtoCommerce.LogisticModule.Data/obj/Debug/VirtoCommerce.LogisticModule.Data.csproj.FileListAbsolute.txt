@@ -25,7 +25,6 @@ D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Dat
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Data\bin\Debug\Omu.ValueInjecter.xml
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Data\bin\Debug\RestSharp.xml
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Data\bin\Debug\VirtoCommerce.Platform.Core.xml
-D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Data\obj\Debug\VirtoCommerce.LogisticModule.Data.csprojResolveAssemblyReference.cache
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Data\obj\Debug\VirtoCommerce.LogisticModule.Data.csproj.CoreCompileInputs.cache
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Data\obj\Debug\VirtoCommerce.LogisticModule.Data.dll
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Data\obj\Debug\VirtoCommerce.LogisticModule.Data.pdb

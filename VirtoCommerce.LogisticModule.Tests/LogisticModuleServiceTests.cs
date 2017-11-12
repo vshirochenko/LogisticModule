@@ -1,5 +1,6 @@
 ﻿using System;
 using Moq;
+using VirtoCommerce.Domain.Commerce.Services;
 using VirtoCommerce.InventoryModule.Data.Repositories;
 using VirtoCommerce.LogisticModule.Data.Dtos;
 using VirtoCommerce.LogisticModule.Data.Services;
@@ -12,14 +13,14 @@ namespace VirtoCommerce.LogisticModule.Tests
         private readonly ILogisticService _LogisticService;
 
         private readonly Mock<IInventoryRepository> _InventoryRepositoryMock;
-
+        private readonly Mock<ICommerceService> _CommerceServiceMock;
 
         public LogisticModuleServiceTests()
         {
             _InventoryRepositoryMock = new Mock<IInventoryRepository>();
+            _CommerceServiceMock = new Mock<ICommerceService>();
 
-            _LogisticService = new LogisticServiceImpl(_InventoryRepositoryMock.Object);
-            
+            _LogisticService = new LogisticServiceImpl(_InventoryRepositoryMock.Object, _CommerceServiceMock.Object);
         }
 
         [Fact]
@@ -44,6 +45,20 @@ namespace VirtoCommerce.LogisticModule.Tests
 
             // ASSERT
             _InventoryRepositoryMock.Verify(x => x.Inventories, Times.Once);
+        }
+
+        [Fact]
+        public void GetNearestCenter_GetAllFulfillmentCenters_WasCalled()
+        {
+            // ARRANGE
+            NearestCenterRequestDto request = new NearestCenterRequestDto();
+            _CommerceServiceMock.Setup(x => x.GetAllFulfillmentCenters());
+
+            // ACT
+            _LogisticService.GetNearestFulfillmentCenter(request);
+
+            // ASSERT
+            _CommerceServiceMock.Verify(x => x.GetAllFulfillmentCenters(), Times.Once);
         }
     }
 }

@@ -27,3 +27,4 @@ D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Dat
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Data\bin\Debug\EntityFramework.SqlServer.xml
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Data\bin\Debug\Omu.ValueInjecter.xml
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Data\bin\Debug\VirtoCommerce.Platform.Core.xml
+D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Data\bin\Debug\GoogleMaps.LocationServices.dll

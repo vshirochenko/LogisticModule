@@ -76,7 +76,7 @@ D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Web
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\System.Net.Http.Formatting.xml
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\System.Web.Http.xml
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\VirtoCommerce.Platform.Core.xml
-D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Web\obj\Debug\VirtoCommerce.LogisticModule.Web.csprojResolveAssemblyReference.cache
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Web\obj\Debug\VirtoCommerce.LogisticModule.Web.csproj.CoreCompileInputs.cache
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Web\obj\Debug\LogisticModule.dll
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Web\obj\Debug\LogisticModule.pdb
+D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\VirtoCommerce.InventoryModule.Data.dll

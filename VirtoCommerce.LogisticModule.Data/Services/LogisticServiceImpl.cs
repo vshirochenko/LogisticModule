@@ -42,6 +42,7 @@ namespace VirtoCommerce.LogisticModule.Data.Services
                 throw new ArgumentNullException("centerRequest");
             var inventories = _inventoryRepository.Inventories;
             var allCenters = _commerceService.GetAllFulfillmentCenters();
+
             return null;
         }
 

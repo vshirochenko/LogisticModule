@@ -44,3 +44,47 @@ D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Web
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Web\obj\Debug\VirtoCommerce.LogisticModule.Web.csproj.CoreCompileInputs.cache
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Web\obj\Debug\LogisticModule.dll
 D:\virto\Test task\Custom module\LogisticModule\VirtoCommerce.LogisticModule.Web\obj\Debug\LogisticModule.pdb
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\LogisticModule.dll.config
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\LogisticModule.dll
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\LogisticModule.pdb
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\CacheManager.Core.dll
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\Common.Logging.Core.dll
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\Common.Logging.dll
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\EntityFramework.dll
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\EntityFramework.SqlServer.dll
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\GoogleMaps.LocationServices.dll
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\Microsoft.Practices.Unity.dll
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\Newtonsoft.Json.dll
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\Omu.ValueInjecter.dll
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\System.Net.Http.Formatting.dll
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\System.Web.Http.dll
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\VirtoCommerce.Domain.dll
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\VirtoCommerce.InventoryModule.Data.dll
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\VirtoCommerce.LogisticModule.Data.dll
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\VirtoCommerce.Platform.Core.dll
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\VirtoCommerce.Platform.Core.Web.dll
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\VirtoCommerce.Platform.Data.dll
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\VirtoCommerce.LogisticModule.Data.pdb
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\CacheManager.Core.xml
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\Common.Logging.pdb
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\Common.Logging.xml
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\Common.Logging.Core.pdb
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\Common.Logging.Core.xml
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\EntityFramework.xml
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\EntityFramework.SqlServer.xml
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\Microsoft.Practices.Unity.xml
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\Newtonsoft.Json.xml
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\Omu.ValueInjecter.xml
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\System.Net.Http.Formatting.xml
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\System.Web.Http.xml
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\bin\VirtoCommerce.Platform.Core.xml
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\obj\Debug\VirtoCommerce.LogisticModule.Web.csprojResolveAssemblyReference.cache
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\obj\Debug\LogisticModule.dll
+C:\Users\vshirochenko\Desktop\testovoe\LogisticModule\VirtoCommerce.LogisticModule.Web\obj\Debug\LogisticModule.pdb

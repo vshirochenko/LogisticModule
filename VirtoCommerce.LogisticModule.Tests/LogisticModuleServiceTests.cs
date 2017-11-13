@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using GoogleMaps.LocationServices;
 using Moq;
+using VirtoCommerce.Domain.Commerce.Model;
 using VirtoCommerce.Domain.Commerce.Services;
+using VirtoCommerce.InventoryModule.Data.Model;
 using VirtoCommerce.InventoryModule.Data.Repositories;
 using VirtoCommerce.LogisticModule.Data.Dtos;
 using VirtoCommerce.LogisticModule.Data.Services;
@@ -66,6 +70,29 @@ namespace VirtoCommerce.LogisticModule.Tests
 
             // ASSERT
             _commerceServiceMock.Verify(x => x.GetAllFulfillmentCenters(), Times.Once);
+        }
+
+        [Fact]
+        public void GetNearestCenter_NotFoundAnything_Returns_Null()
+        {
+            // ARRANGE
+            GettingNearestCenterRequestDto request = new GettingNearestCenterRequestDto
+            {
+                PostalCode = "PostalCode_1",
+                ProductIds = new List<string> { "1" } // FAIL, only product with Id = "1" exists!
+            };
+            _commerceServiceMock
+                .Setup(x => x.GetAllFulfillmentCenters())
+                .Returns(new List<FulfillmentCenter> { new FulfillmentCenter { PostalCode = "PostalCode_1", Id = "Ful_Id_1" } });
+            _inventoryRepositoryMock
+                .Setup(x => x.Inventories)
+                .Returns(new List<Inventory> { new Inventory { FulfillmentCenterId = "Ful_Id_1", Sku = "1" } }.AsQueryable());
+
+            // ACT
+            FulfillmentCenterDto center = _LogisticService.GetNearestFulfillmentCenter(request);
+
+            // ASSERT            
+            Assert.Null(center);
         }
 
         [Fact]

@@ -46,7 +46,8 @@ namespace VirtoCommerce.LogisticModule.Data.Services
         }
 
         /// <summary>
-        /// 
+        /// Finds distance between two locations by addresses (abstract definition, now it is postal code),
+        /// because of Google api allows to find geographical location by postal code
         /// </summary>
         /// <param name="postalCodeFrom">Address of the first location</param>
         /// <param name="postalCodeTo">Address of the second location</param>

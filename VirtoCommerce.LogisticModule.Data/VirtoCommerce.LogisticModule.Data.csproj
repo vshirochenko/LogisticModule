@@ -80,6 +80,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converters\FulfillmentCenterConverter.cs" />
     <Compile Include="Dtos\FulfillmentCenterDto.cs" />
     <Compile Include="Dtos\GettingNearestCenterRequestDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

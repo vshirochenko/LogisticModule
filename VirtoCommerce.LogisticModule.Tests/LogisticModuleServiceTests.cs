@@ -63,7 +63,7 @@ namespace VirtoCommerce.LogisticModule.Tests
         {
             // ARRANGE
             GettingNearestCenterRequestDto request = new GettingNearestCenterRequestDto();
-            _commerceServiceMock.Setup(x => x.GetAllFulfillmentCenters());
+            _commerceServiceMock.Setup(x => x.GetAllFulfillmentCenters()).Returns(new List<FulfillmentCenter>());
 
             // ACT
             _LogisticService.GetNearestFulfillmentCenter(request);
@@ -79,7 +79,7 @@ namespace VirtoCommerce.LogisticModule.Tests
             GettingNearestCenterRequestDto request = new GettingNearestCenterRequestDto
             {
                 PostalCode = "PostalCode_1",
-                ProductIds = new List<string> { "1" } // FAIL, only product with Id = "1" exists!
+                ProductIds = new List<string> { "2" } // FAIL, only product with Id = "1" exists!
             };
             _commerceServiceMock
                 .Setup(x => x.GetAllFulfillmentCenters())
@@ -93,6 +93,30 @@ namespace VirtoCommerce.LogisticModule.Tests
 
             // ASSERT            
             Assert.Null(center);
+        }
+
+        [Fact]
+        public void GetNearestCenter_SingleCenterWasFound()
+        {
+            // ARRANGE
+            GettingNearestCenterRequestDto request = new GettingNearestCenterRequestDto
+            {
+                PostalCode = "PostalCode_1",
+                ProductIds = new List<string> { "1" } // OK, exists!
+            };
+            _commerceServiceMock
+                .Setup(x => x.GetAllFulfillmentCenters())
+                .Returns(new List<FulfillmentCenter> { new FulfillmentCenter { PostalCode = "PostalCode_1", Id = "Ful_Id_1" } });
+            _inventoryRepositoryMock
+                .Setup(x => x.Inventories)
+                .Returns(new List<Inventory> { new Inventory { FulfillmentCenterId = "Ful_Id_1", Sku = "1" } }.AsQueryable());
+
+            // ACT
+            FulfillmentCenterDto center = _LogisticService.GetNearestFulfillmentCenter(request);
+
+            // ASSERT            
+            Assert.NotNull(center);
+            Assert.Equal("Ful_Id_1", center.Id);
         }
 
         [Fact]

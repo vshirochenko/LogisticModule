@@ -7,6 +7,7 @@ using GoogleMaps.LocationServices;
 using VirtoCommerce.Domain.Commerce.Model;
 using VirtoCommerce.Domain.Commerce.Services;
 using VirtoCommerce.InventoryModule.Data.Repositories;
+using VirtoCommerce.LogisticModule.Data.Converters;
 using VirtoCommerce.LogisticModule.Data.Dtos;
 
 namespace VirtoCommerce.LogisticModule.Data.Services
@@ -40,8 +41,28 @@ namespace VirtoCommerce.LogisticModule.Data.Services
         {
             if (centerRequest == null)
                 throw new ArgumentNullException("centerRequest");
+
             var inventories = _inventoryRepository.Inventories;
-            var allCenters = _commerceService.GetAllFulfillmentCenters();
+            var allCenters = _commerceService.GetAllFulfillmentCenters()
+                .Where(x => x.PostalCode == centerRequest.PostalCode);
+
+            foreach (FulfillmentCenter center in allCenters)
+            {
+                var centerInventories = inventories.Where(x => x.FulfillmentCenterId == center.Id);
+                bool allProductsExist = true;
+                foreach (string productId in centerRequest.ProductIds)
+                {
+                    if (!centerInventories.Any(x => x.Sku == productId))
+                    {
+                        allProductsExist = false;
+                        break;
+                    }
+                }
+                if (allProductsExist)
+                {
+                    return center.ToDto();
+                }
+            }
 
             return null;
         }
